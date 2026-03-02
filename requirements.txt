@@ -1,0 +1,8 @@
+langgraph 
+langchain 
+langchain-openai
+# fastapi
+# uvicorn[standard]
+python-dotenv
+langchain-groq
+feedparser
