@@ -71,7 +71,7 @@ def fetch_latest_news(hours_back: int = 24) -> str:
     return str(unique[:30]) if unique else "No recent news found in the last 24 hours from any source."
 tools = [fetch_latest_news]
 
-llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
+llm = ChatGroq(model="meta-llama/llama-4-scout-17b-16e-instruct", temperature=0)
 llm_with_tools = llm.bind_tools(tools)
 
 class AgentState(TypedDict):
@@ -256,3 +256,4 @@ IMPORTANT:
 
 if __name__ == "__main__":
     run_news_agent()
+
